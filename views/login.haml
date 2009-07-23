@@ -1,0 +1,11 @@
+%h1 Log In
+
+%form#centerthing{:action => 'create_session', :method => 'post'}
+  .row
+    .label Username
+    %input{:type => 'text', :name => 'login', :size => '10'}
+  .row
+    .label Password
+    %input{:type => 'password', :name => 'password', :size => '10'}
+  .row
+    %input{:type => 'submit'}

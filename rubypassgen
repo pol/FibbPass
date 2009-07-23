@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require File.join(File.dirname(__FILE__),'passgen')
+
+num = ARGV[0].to_i || 5
+len = ARGV[1].to_i || 8
+
+puts Passgen.new.generate_series(num,len).join("\n")

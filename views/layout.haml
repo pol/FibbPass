@@ -1,0 +1,16 @@
+%html
+  %head
+    %title Password Generator
+    %link{ :href => "/stylesheet.css", :type=>"text/css", :rel => "stylesheet"}
+  %body
+    #main
+    #userbar
+      -if session[:current_user]
+        You are logged in as:
+        =session[:current_user].login
+        %a{:href => '/logout'} Logout
+      -else
+        %a{:href => '/login'} Login
+    #message
+      %p= session.delete(:message)
+    = yield
